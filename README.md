@@ -31,3 +31,19 @@ pyuic5 ui.ui -o ui.py
 // re-run the application
 python main.py
 ```
+
+## Git
+
+```c
+//to check the status
+git status
+
+//to add files to change set
+git add file1 file2 
+
+//to commit locally the changes
+git commit -m "mesage to track history"
+
+//to push the changes remotly
+git push
+```
