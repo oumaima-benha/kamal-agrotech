@@ -24,6 +24,10 @@ python main.py
 
 ## Re-Generate the UI code
 
-```
+```c
+// re-generate the UI
 pyuic5 ui.ui -o ui.py
+
+// re-run the application
+python main.py
 ```
