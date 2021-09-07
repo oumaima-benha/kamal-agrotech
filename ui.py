@@ -9,19 +9,21 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+from PyQt5.QtGui import QPixmap
+from PyQt5.QtWidgets import QMainWindow, QApplication, QLabel
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(673, 578)
+        MainWindow.resize(773, 678)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.groupBox = QtWidgets.QGroupBox(self.centralwidget)
-        self.groupBox.setGeometry(QtCore.QRect(0, 0, 671, 261))
+        self.groupBox.setGeometry(QtCore.QRect(0, 0, 771, 261))
         self.groupBox.setObjectName("groupBox")
         self.lcdNumber = QtWidgets.QLCDNumber(self.groupBox)
-        self.lcdNumber.setGeometry(QtCore.QRect(520, 10, 151, 81))
+        self.lcdNumber.setGeometry(QtCore.QRect(620, 170, 151, 81))
+        #self.lcdNumber.setGeometry(QtCore.QRect(620, 10, 151, 81))
         self.lcdNumber.setObjectName("lcdNumber")
         self.label = QtWidgets.QLabel(self.groupBox)
         self.label.setGeometry(QtCore.QRect(10, 20, 47, 13))
@@ -48,10 +50,10 @@ class Ui_MainWindow(object):
         self.dateEdit.setGeometry(QtCore.QRect(10, 200, 411, 22))
         self.dateEdit.setObjectName("dateEdit")
         self.tableWidget = QtWidgets.QTableView(self.centralwidget)
-        self.tableWidget.setGeometry(QtCore.QRect(0, 260, 671, 261))
+        self.tableWidget.setGeometry(QtCore.QRect(0, 260, 771, 261))
         self.tableWidget.setObjectName("tableWidget")
         self.scrollArea = QtWidgets.QScrollArea(self.centralwidget)
-        self.scrollArea.setGeometry(QtCore.QRect(0, 520, 671, 41))
+        self.scrollArea.setGeometry(QtCore.QRect(0, 520, 771, 41))
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
@@ -71,7 +73,15 @@ class Ui_MainWindow(object):
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
+        MainWindow.setStyleSheet("background-image : url(image4.png)")
+        MainWindow.setWindowIcon(QtGui.QIcon('icone1.png'))
+        
+        label = QLabel(MainWindow)
+        pixmap = QPixmap('images.png')
+        label.setPixmap(pixmap)
+        label.setGeometry(QtCore.QRect(550, 10, 275, 153))
 
+        
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 

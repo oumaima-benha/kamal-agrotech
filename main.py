@@ -4,6 +4,7 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox, QTableView
 from PyQt5 import QtSql
 from PyQt5 import QtCore
 from PyQt5 import QtGui
+from PyQt5.QtGui import QPixmap
 
 class form(QMainWindow):
     def __init__(self):
