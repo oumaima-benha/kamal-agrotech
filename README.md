@@ -13,7 +13,7 @@ python -m venv venv
 source venv/Scripts/activate
 
 //install needed packages
-pip install requirments.txt
+pip install -r requirments.txt
 
 //initialize the database
 python initdb.py

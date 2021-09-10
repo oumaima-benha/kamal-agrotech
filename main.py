@@ -65,6 +65,7 @@ class form(QMainWindow):
         else:
             QMessageBox.question(self,'Message', "Please select a row would you like to update", QMessageBox.Ok)
             self.show()
+
     def search(self):
         text = self.ui.lineEdit_5.text()        
         self.model.setFilter("name like '%" + str(text) + "%'")
