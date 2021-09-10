@@ -1,3 +1,5 @@
+import os
+import pywhatkit
 import sys
 from ui import *
 from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox, QTableView
@@ -57,7 +59,12 @@ class form(QMainWindow):
 
     def updaterow(self):
         if self.ui.tableWidget.currentIndex().row() > -1:
-            record = self.model.record(self.ui.tableWidget.currentIndex().row())            
+            record = self.model.record(self.ui.tableWidget.currentIndex().row())    
+            if(record.value("quantity") == 0):
+                product = record.value("name")
+                msg = "The product {} is no longer in stock"
+                number = os.environ["PHONE_NUMBER"]
+                pywhatkit.sendwhatmsg_instantly(number, msg.format(product), 60, True)        
             record.setValue("name",self.ui.lineEdit.text())
             record.setValue("description",self.ui.lineEdit_2.text())
             record.setValue("experiation_date", self.ui.dateEdit.text())
