@@ -32,6 +32,8 @@ class form(QMainWindow):
 
         self.onlyInt = QtGui.QIntValidator()
         self.ui.lineEdit_3.setValidator(self.onlyInt)
+        self.ui.pushButton_4.clicked.connect(self.search)
+
 
     def addToDb(self):
         self.model.insertRows(self.i,1)
@@ -63,6 +65,11 @@ class form(QMainWindow):
         else:
             QMessageBox.question(self,'Message', "Please select a row would you like to update", QMessageBox.Ok)
             self.show()
+    def search(self):
+        text = self.ui.lineEdit_5.text()        
+        self.model.setFilter("name like '%" + str(text) + "%'")
+        self.model.select()
+
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
