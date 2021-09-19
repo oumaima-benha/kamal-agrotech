@@ -3,9 +3,9 @@ connection = sqlite3.connect("products.db")
 cursor = connection.cursor()
 cursor.execute("""
     CREATE TABLE products
-    (id INTEGER, name TEXT, description TEXT,experiation_date Date, price INTEGER, quantity INTEGER)
+    (Name TEXT, Category TEXT, Homologation TEXT, Composition TEXT, PackagingQuantity TEXT, PurchasePrice INTEGER, SellingPrice INTEGER, Quantity INTEGER)
 """)
 cursor.execute("""INSERT INTO products VALUES 
-    (1, 'tid', 'mas7ou9 jmil', '1970-01-01', 12, 100)
+    ('test', 'Herbicide', 'E02-7-009', 'elementx 10%', '1L', 22, 40, 100)
 """)
 connection.commit()
