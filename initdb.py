@@ -1,5 +1,5 @@
 import sqlite3
-connection = sqlite3.connect("products.db")
+connection = sqlite3.connect("resources/db/products.db")
 cursor = connection.cursor()
 cursor.execute("""
     CREATE TABLE products

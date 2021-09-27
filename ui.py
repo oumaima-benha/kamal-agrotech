@@ -192,7 +192,6 @@ class Ui_MainWindow(object):
                     "min-width:120px;"
                     "min-height:30px;"
                     "font: bold 15px;"
-
                     "}")
         self.UpdatePushButton.setStyleSheet("QPushButton"
                     "{"

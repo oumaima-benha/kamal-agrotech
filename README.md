@@ -47,3 +47,8 @@ git commit -m "mesage to track history"
 //to push the changes remotly
 git push
 ```
+## Pyinstaller
+
+```
+pyinstaller -n "AGROTECH" --add-data="resources/*;resources"  --add-data="pywhatkit_dbs.txt;."  --onefile --exclude-module='FixTk' --exclude-module='tcl' --exclude-module='tk' --exclude-module='_tkinter'   --exclude-module='tkinter'   --exclude-module='Tkinter' main.py
+```
